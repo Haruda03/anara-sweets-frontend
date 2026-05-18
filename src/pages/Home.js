@@ -505,7 +505,7 @@ const ReelsSection = () => {
       <div className="reels-container" ref={reelRef}>
         {reels.map((reel) => (
           <div key={reel.id} className="reel-card">
-            <div 
+            <div
               className="video-wrapper"
               onMouseEnter={() => setHoveredReelId(reel.id)}
               onMouseLeave={() => setHoveredReelId(null)}
@@ -540,7 +540,7 @@ const ReelsSection = () => {
       </div>
 
       {canScrollRight && (
-        <button 
+        <button
           className="fixed-scroll-arrow right-end-arrow"
           onClick={() => scrollReel("right")}
         >
@@ -592,9 +592,9 @@ const BestSellersSection = () => {
   return (
     <section className="bestsellers-section">
       <div className="bestsellers-header">
-        <button 
-          className="nav-arrow bestsellers-nav-arrow" 
-          onClick={() => scrollBestSellers("left")} 
+        <button
+          className="nav-arrow bestsellers-nav-arrow"
+          onClick={() => scrollBestSellers("left")}
           style={{ visibility: showLeftArrow ? 'visible' : 'hidden' }}
         >
           &#8249;
@@ -626,7 +626,7 @@ const BestSellersSection = () => {
                 </p>
                 <p className="bestseller-price">Rs. {item.price.toFixed(2)}</p>
               </div>
-              <button 
+              <button
                 className={`bestseller-add-btn ${isAdded ? "added" : ""}`}
                 onClick={() => handleAddToCartBestSellers(item.id)}
               >
@@ -693,8 +693,8 @@ const AboutUsSection = () => {
           <p className="about-subtitle">ABOUT US</p>
           <h5 className="about-heading">
             Anara Sweets is a delicious tribute to our Ethnic Indian flavours and Age-
-            Old Traditional Recipes.<br/><br/>
-             Every bite is a Celebration of Our Ethnic Indian flavours and Rich Heritage.
+            Old Traditional Recipes.<br /><br />
+            Every bite is a Celebration of Our Ethnic Indian flavours and Rich Heritage.
           </h5>
           <button className="about-btn">KNOW MORE</button>
         </div>
@@ -939,7 +939,6 @@ const Home = () => {
                     images={item.images}
                     productName={item.name}
                   />
-                  {item.isBestSeller && <div className="badge">Best<br/>Seller</div>}
                 </div>
 
                 <div className="card-body">
@@ -950,7 +949,7 @@ const Home = () => {
                   <p className="price">Rs. {item.price}.00</p>
                 </div>
 
-                <button 
+                <button
                   className={`add-btn ${isAdded ? "added" : ""}`}
                   onClick={() => handleAddToCart(item.id)}
                 >
