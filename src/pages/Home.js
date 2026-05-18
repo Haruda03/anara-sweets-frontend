@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
-import "./home.css";
+import "../styles/home.css";
 
 // Import all images (multiple angles/variants per product)
 import mysorePak1 from "../assets/images/MYSORE PAK.jpg";
