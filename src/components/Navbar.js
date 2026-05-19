@@ -164,10 +164,13 @@ const Navbar = () => {
               </span>
               {isDropdownOpen && (
                 <div className="dropdown-menu">
+
+
                   <Link to="/all-items" className="dropdown-item">All Items</Link>
-                  <Link to="/all-sweets" className="dropdown-item">All Sweets</Link>
+                  <Link to="/sweets" className="dropdown-item">All Sweets</Link>
                   <Link to="/all-traditional" className="dropdown-item">All Traditional</Link>
                   <Link to="/all-health-mix" className="dropdown-item">All Health Mix</Link>
+
                 </div>
               )}
             </div>

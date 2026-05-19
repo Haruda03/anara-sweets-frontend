@@ -1,0 +1,226 @@
+/* ==========================================
+   ALL SWEETS PAGE - CLEAN ECOMMERCE STYLE
+   ========================================== */
+
+.product-page-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+/* MAIN LAYOUT */
+.product-container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  gap: 35px;
+}
+
+/* SIDEBAR */
+.filter-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.filter-section {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* PRICE BOX */
+.price-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.price-box {
+  flex: 1;
+  padding: 8px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.price-slider {
+  width: 100%;
+  accent-color: #000;
+}
+
+/* MAIN CONTENT */
+.product-content {
+  flex: 1;
+}
+
+/* HEADER */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.category-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* FILTER BUTTON */
+.icon-filter-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* SORT */
+.sort-select-dropdown {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* =========================
+   PRODUCT GRID FIX
+   ========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-grid.sidebar-hidden {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* =========================
+   PRODUCT CARD
+   ========================= */
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   IMAGE FIX (IMPORTANT)
+   ========================= */
+.image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* 🔥 FIXED IMAGE SIZE */
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 prevents stretching */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* BADGE */
+.bestseller-badge {
+  position: absolute;
+  margin: 10px;
+  background: #d92128;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+/* INFO */
+.product-info {
+  padding: 14px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-desc {
+  font-size: 12px;
+  color: #666;
+  height: 32px;
+  overflow: hidden;
+}
+
+.rating-row {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.stars {
+  color: #ffa500;
+}
+
+.reviews-count {
+  font-size: 11px;
+  color: #777;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .product-grid,
+  .product-grid.sidebar-hidden {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+  }
+
+  .product-grid,
+  .product-grid.sidebar-hidden {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .product-grid,
+  .product-grid.sidebar-hidden {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
