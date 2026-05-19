@@ -5,7 +5,9 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 
-import AllSweets from "./pages/AllSweets";
+import AllTraditional from './pages/AllTraditional';
+import AllHealthMix from './pages/AllHealthMix';
+import AllCollections from './pages/AllCollections';
 
 import './styles/index.css';
 
@@ -18,10 +20,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
 
-          <Route path="/sweets" element={<AllSweets />} />
-          {/* Contact Page Route */}
-          <Route path="/Contact" element={<Contact />} />
+          {/* Collections */}
+          <Route path="/all-collections" element={<AllCollections />} />
+          <Route path="/all-traditional" element={<AllTraditional />} />
+          <Route path="/all-health-mix" element={<AllHealthMix />} />
 
+          {/* Contact Page */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
       </div>
