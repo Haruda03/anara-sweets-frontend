@@ -81,14 +81,14 @@ const Navbar = () => {
           <div className="social-icons">
             <a href="https://www.facebook.com/share/17txCyc8JA/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
-                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.7v-2.9h2.7V9.4c0-2.7 1.6-4.2 4-4.2 1.2 0 2.4.2 2.4.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v2h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/>
+                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.7v-2.9h2.7V9.4c0-2.7 1.6-4.2 4-4.2 1.2 0 2.4.2 2.4.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v2h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z" />
               </svg>
             </a>
             <a href="https://www.instagram.com/anarasweets.inc?igsh=MWc4aXhrcG84MWptaw==" target="_blank" rel="noopener noreferrer" className="social-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"/>
-                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-                <circle cx="17.5" cy="6.5" r="1.2"/>
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z" />
+                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                <circle cx="17.5" cy="6.5" r="1.2" />
               </svg>
             </a>
           </div>
@@ -154,7 +154,7 @@ const Navbar = () => {
       <div className="nav-bar">
         <div className="nav-bar-container">
           <div className="nav-links">
-            <div 
+            <div
               className="nav-dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
@@ -171,15 +171,9 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <a href="#product" className="nav-link">Product</a>
-
-            <a href="/about" className="nav-link">About Us</a>
-            <a href="#contact" className="nav-link">Contact Us</a>
-
-            <a href="#about" className="nav-link">About Us</a>
-            <Link to="/contact" className="nav-link">
-  Contact Us
-</Link>
+            <Link to="/product" className="nav-link">Product</Link>
+            <Link to="/about" className="nav-link">About Us</Link>
+            <Link to="/contact" className="nav-link">Contact Us</Link>
           </div>
         </div>
       </div>
@@ -196,11 +190,11 @@ const Navbar = () => {
         </div>
 
         <div className="mobile-dropdown">
-          <div 
+          <div
             className="mobile-dropdown-title"
             onClick={() => setActiveSubMenu('All')}
           >
-            All 
+            All
             <span className="arrow">›</span>
           </div>
         </div>
