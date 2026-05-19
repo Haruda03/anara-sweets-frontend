@@ -1,0 +1,152 @@
+/* About page styles */
+.about-hero {
+  background: #efe7e1;
+  padding: 60px 0;
+}
+
+.about-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 40px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.about-hero-content {
+  background: #fffdf9;
+  padding: 60px 40px;
+  border-radius: 6px;
+}
+
+.about-title {
+  font-size: 38px;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.about-subtitle {
+  color: #6c6c6c;
+  margin-bottom: 28px;
+  font-size: 16px;
+}
+
+.about-shop-btn {
+  display: inline-block;
+  background: #caa83f;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.about-details {
+  padding: 60px 0 100px;
+  background: white;
+}
+
+.about-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-details h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-details p {
+  color: #444;
+  line-height: 1.8;
+}
+
+.about-details ul {
+  margin-top: 12px;
+  list-style: disc inside;
+}
+
+@media (max-width: 980px) {
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-image img {
+    height: 360px;
+  }
+
+  .about-hero-content {
+    padding: 28px 20px;
+  }
+
+  .about-title {
+    font-size: 26px;
+  }
+}
+
+/* New sections styles */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.center { text-align: center; }
+.muted { color: #6b6b6b; max-width: 850px; margin: 0 auto; }
+
+.excellence-section .banner-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin-top: 30px;
+}
+
+.excellence-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #173049;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.two-col .image img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; }
+
+.two-col .text h3 { font-size: 22px; margin-bottom: 12px; color: #173049; }
+.two-col .text p { color: #444; line-height: 1.8; }
+
+.about-grid .text h3 { font-size: 28px; margin-top: 0; }
+
+.reverse-on-mobile { grid-auto-flow: dense; }
+
+.philosophy-section .alt { padding-top: 10px; }
+
+.certifications-section { padding: 40px 0 100px; }
+.cert-icons { display: flex; gap: 40px; justify-content: center; align-items: center; margin-top: 30px; }
+.cert-icons img { width: 80px; height: 80px; object-fit: contain; opacity: 0.9; }
+
+@media (max-width: 880px) {
+  .two-col { grid-template-columns: 1fr; }
+  .two-col .image img { height: 240px; }
+  .about-hero-image img { height: 320px; }
+  .cert-icons { gap: 20px; }
+}
+
