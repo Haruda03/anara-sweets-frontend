@@ -6,8 +6,8 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 
 import Contact from './pages/Contact';
-
-
+import AllTraditional from './pages/AllTraditional';
+import AllHealthMix from './pages/AllHealthMix';
 import './styles/index.css';
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
 
           {/* Contact Page Route */}
           <Route path="/Contact" element={<Contact />} />
-
+          <Route path="/all-traditional" element={<AllTraditional />} />
+          <Route path="/all-health-mix" element={<AllHealthMix />} />
         </Routes>
 
       </div>
