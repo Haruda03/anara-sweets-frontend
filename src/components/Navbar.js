@@ -48,10 +48,10 @@ const Navbar = () => {
 
   const submenuItems = {
     'All': [
-      { name: 'All Items', path: '#all-items' },
-      { name: 'All Sweets', path: '#all-sweets' },
-      { name: 'All Traditional', path: '#all-traditional' },
-      { name: 'All Health Mix', path: '#all-health-mix' }
+      { name: 'All Items', path: '/all-items' },
+      { name: 'All Sweets', path: '/all-sweets' },
+      { name: 'All Traditional', path: '/all-traditional' },
+      { name: 'All Health Mix', path: '/all-health-mix' }
     ]
   };
 
@@ -164,10 +164,10 @@ const Navbar = () => {
               </span>
               {isDropdownOpen && (
                 <div className="dropdown-menu">
-                  <a href="#all-items" className="dropdown-item">All Items</a>
-                  <a href="#all-sweets" className="dropdown-item">All Sweets</a>
-                  <a href="#all-traditional" className="dropdown-item">All Traditional</a>
-                  <a href="#all-health-mix" className="dropdown-item">All Health Mix</a>
+                  <Link to="/all-items" className="dropdown-item">All Items</Link>
+                  <Link to="/all-sweets" className="dropdown-item">All Sweets</Link>
+                  <Link to="/all-traditional" className="dropdown-item">All Traditional</Link>
+                  <Link to="/all-health-mix" className="dropdown-item">All Health Mix</Link>
                 </div>
               )}
             </div>
