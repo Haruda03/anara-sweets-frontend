@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 
+import AllSweets from "./pages/AllSweets";
 import AllTraditional from './pages/AllTraditional';
 import AllHealthMix from './pages/AllHealthMix';
 import AllCollections from './pages/AllCollections';
@@ -21,7 +22,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
 
           {/* Collections */}
-          <Route path="/all-collections" element={<AllCollections />} />
+          <Route path="/all-collections" element={<AllCollections />} />   
+          <Route path="/sweets" element={<AllSweets />} />
           <Route path="/all-traditional" element={<AllTraditional />} />
           <Route path="/all-health-mix" element={<AllHealthMix />} />
 
