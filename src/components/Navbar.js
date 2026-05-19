@@ -171,7 +171,7 @@ const Navbar = () => {
               )}
             </div>
             <a href="#product" className="nav-link">Product</a>
-            <a href="#about" className="nav-link">About Us</a>
+            <a href="/about" className="nav-link">About Us</a>
             <a href="#contact" className="nav-link">Contact Us</a>
           </div>
         </div>
