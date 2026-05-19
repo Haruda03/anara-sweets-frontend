@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import "../styles/home.css";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 // Import all images (multiple angles/variants per product)
 import mysorePak1 from "../assets/images/MYSORE PAK.jpg";
@@ -663,7 +664,7 @@ const FlavourfulDelightsSection = () => {
           <img src={flavourfulFullWidthImg} alt="Traditional Savouries" />
           <div className="fullwidth-overlay">
             <p className="fullwidth-text">Traditional Savouries, <br />made the native way</p>
-            <button className="fullwidth-shop-btn">Shop now</button>
+            <Link to="/all-collections" className="fullwidth-shop-btn">Shop now</Link>
           </div>
         </div>
       </div>
