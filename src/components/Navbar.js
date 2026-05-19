@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/navbar.css';
 import logo from '../assets/images/logo.png';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -171,8 +172,14 @@ const Navbar = () => {
               )}
             </div>
             <a href="#product" className="nav-link">Product</a>
+
             <a href="/about" className="nav-link">About Us</a>
             <a href="#contact" className="nav-link">Contact Us</a>
+
+            <a href="#about" className="nav-link">About Us</a>
+            <Link to="/contact" className="nav-link">
+  Contact Us
+</Link>
           </div>
         </div>
       </div>
@@ -200,7 +207,7 @@ const Navbar = () => {
 
         <a href="#product" onClick={handleMenuLinkClick}>Product</a>
         <a href="#about" onClick={handleMenuLinkClick}>About Us</a>
-        <a href="#contact" onClick={handleMenuLinkClick}>Contact Us</a>
+        <Link to="/contact" onClick={handleMenuLinkClick}>Contact Us</Link>
       </div>
 
       <div className={`mobile-submenu-panel ${activeSubMenu ? 'active' : ''}`}>
