@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 
 import Contact from './pages/Contact';
+import AllCollections from './pages/AllCollections';
 
 
 import './styles/index.css';
@@ -19,10 +20,11 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/all-collections" element={<AllCollections />} />
 
 
           {/* Contact Page Route */}
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
 
         </Routes>
 
