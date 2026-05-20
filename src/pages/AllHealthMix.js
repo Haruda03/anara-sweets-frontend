@@ -8,7 +8,6 @@ import '../styles/allhealthmix.css';
 import '../styles/filter.css';
 
 import { useNavigate } from 'react-router-dom';
-
 import heroImg from '../assets/images/img2.jpg';
 const placeholderImage = 'https://via.placeholder.com/400x400?text=Product+Image';
 
