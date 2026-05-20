@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 // Import all images (multiple angles/variants per product)
-import mysorePak1 from "../assets/images/MYSORE PAK.jpg";
+import mysorePak1 from "../assets/images/MYSORE PAK1.jpg";
 import mysorePak2 from "../assets/images/MYSORE PAK.jpg";
-import mysorePak3 from "../assets/images/MYSORE PAK.jpg";
+import mysorePak3 from "../assets/images/MYSORE PAK1.jpg";
 
 import ravaKesari1 from "../assets/images/RAVA KESARI.jpg";
 import ravaKesari2 from "../assets/images/RAVA KESARI.jpg";
@@ -34,7 +34,7 @@ import turkishDelight1 from "../assets/images/TURKISH DELIGHT.jpg";
 import turkishDelight2 from "../assets/images/TURKISH DELIGHT.jpg";
 import turkishDelight3 from "../assets/images/TURKISH DELIGHT.jpg";
 
-import eggFlour1 from "../assets/images/EGG FLOUR.jpg";
+import eggFlour1 from "../assets/images/EGG FLOUR1.jpg";
 import eggFlour2 from "../assets/images/EGG FLOUR.jpg";
 import eggFlour3 from "../assets/images/EGG FLOUR.jpg";
 
@@ -42,41 +42,41 @@ import healthMix1 from "../assets/images/HEALTH MIX.jpg";
 import healthMix2 from "../assets/images/HEALTH MIX.jpg";
 import healthMix3 from "../assets/images/HEALTH MIX.jpg";
 
-import karaBoondi1 from "../assets/images/KARA BOONDI.jpg";
-import karaBoondi2 from "../assets/images/KARA BOONDI.jpg";
-import karaBoondi3 from "../assets/images/KARA BOONDI.jpg";
+import karaBoondi1 from "../assets/images/KARA BOONDI2.jpg";
+import karaBoondi2 from "../assets/images/KARA BOONDI1.jpg";
+import karaBoondi3 from "../assets/images/KARA BOONDI2.jpg";
 
-import karaSippi1 from "../assets/images/KARA SIPPI.jpg";
-import karaSippi2 from "../assets/images/KARA SIPPI.jpg";
-import karaSippi3 from "../assets/images/KARA SIPPI.jpg";
+import karaSippi1 from "../assets/images/KARA SIPPI1.jpg";
+import karaSippi2 from "../assets/images/KARA SIPPI2.jpg";
+import karaSippi3 from "../assets/images/KARA SIPPI1.jpg";
 
-import kuchchiMurukku1 from "../assets/images/KUCHCHI MURUKKU.jpg";
-import kuchchiMurukku2 from "../assets/images/KUCHCHI MURUKKU.jpg";
-import kuchchiMurukku3 from "../assets/images/KUCHCHI MURUKKU.jpg";
+import kuchchiMurukku1 from "../assets/images/KUCHCHIMURUKKU1.jpg";
+import kuchchiMurukku2 from "../assets/images/KUCHCHIMURUKKU1.jpg";
+import kuchchiMurukku3 from "../assets/images/KUCHCHIMURUKKU1.jpg";
 
-import mixture1 from "../assets/images/MIXTURE.jpg";
+import mixture1 from "../assets/images/MIXTURE1.jpg";
 import mixture2 from "../assets/images/MIXTURE.jpg";
-import mixture3 from "../assets/images/MIXTURE.jpg";
+import mixture3 from "../assets/images/MIXTURE1.jpg";
 
-import mulluMurukku1 from "../assets/images/MULLU MURUKKU.jpg";
-import mulluMurukku2 from "../assets/images/MULLU MURUKKU.jpg";
-import mulluMurukku3 from "../assets/images/MULLU MURUKKU.jpg";
+import mulluMurukku1 from "../assets/images/MULLU MURUKKU1.jpg";
+import mulluMurukku2 from "../assets/images/MULLU MURUKKU2.jpg";
+import mulluMurukku3 from "../assets/images/MULLU MURUKKU3.jpg";
 
-import payathamUrundai1 from "../assets/images/PAYATHAM URUNDAI.jpg";
+import payathamUrundai1 from "../assets/images/PAYATHAMURUNDAI1.jpg";
 import payathamUrundai2 from "../assets/images/PAYATHAM URUNDAI.jpg";
-import payathamUrundai3 from "../assets/images/PAYATHAM URUNDAI.jpg";
+import payathamUrundai3 from "../assets/images/PAYATHAMURUNDAI1.jpg";
 
-import ravaLaddu1 from "../assets/images/RAVA LADDU.jpg";
-import ravaLaddu2 from "../assets/images/RAVA LADDU.jpg";
-import ravaLaddu3 from "../assets/images/RAVA LADDU.jpg";
+import ravaLaddu1 from "../assets/images/RAVALADDU2.jpg";
+import ravaLaddu2 from "../assets/images/RAVALADDU3.jpg";
+import ravaLaddu3 from "../assets/images/RAVALADDU4.jpg";
 
-import richLaddu1 from "../assets/images/RICH LADDU.jpg";
-import richLaddu2 from "../assets/images/RICH LADDU.jpg";
-import richLaddu3 from "../assets/images/RICH LADDU.jpg";
+import richLaddu1 from "../assets/images/RICH LADDU2.jpg";
+import richLaddu2 from "../assets/images/RICH LADDU1.jpg";
+import richLaddu3 from "../assets/images/RICH LADDU2.jpg";
 
-import thattuVadai1 from "../assets/images/THATTU VADAI.jpg";
-import thattuVadai2 from "../assets/images/THATTU VADAI.jpg";
-import thattuVadai3 from "../assets/images/THATTU VADAI.jpg";
+import thattuVadai1 from "../assets/images/THATTU VADAI1.jpg";
+import thattuVadai2 from "../assets/images/THATTU VADAI1.jpg";
+import thattuVadai3 from "../assets/images/THATTU VADAI1.jpg";
 
 
 
