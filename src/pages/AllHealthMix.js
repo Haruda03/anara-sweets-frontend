@@ -8,8 +8,7 @@ import sweetsImages from "../assets/images/sweets";
 // Layout styling imports
 import '../styles/product.css';
 import '../styles/filter.css';
-
-
+import '../styles/allhealthmix.css';
 
 import heroImg from '../assets/images/img2.jpg';
 const placeholderImage = 'https://via.placeholder.com/400x400?text=Product+Image';
