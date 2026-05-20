@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,24 +13,34 @@ const ContactPage = () => {
     message: "",
   });
 
+  const [successMsg, setSuccessMsg] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+
+    setSuccessMsg("✅ Your message has been sent successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+
+    setTimeout(() => {
+      setSuccessMsg("");
+    }, 3000);
   };
 
   return (
     <>
-      {/* NAVBAR */}
       <Navbar />
 
       <div className="contact-page">
-
-        {/* HEADER */}
         <div className="contact-header">
           <h1>Get In Touch</h1>
           <p>We are here to help you with orders and inquiries.</p>
@@ -39,16 +48,16 @@ const ContactPage = () => {
           <div className="contact-info">
             <p><b>Address:</b> Jaffna, Sri Lanka</p>
             <p><b>Phone:</b> +94 75 275 3522</p>
-            <p><b>Email:</b> info@anarasweets.com</p>
+            <p><b>Email:</b> anarasweets.inc@gmail.com </p>
           </div>
         </div>
 
-        {/* FORM */}
         <div className="contact-box">
           <h2>Contact Us</h2>
 
-          <form onSubmit={handleSubmit} className="contact-form">
+          {successMsg && <div className="success-msg">{successMsg}</div>}
 
+          <form onSubmit={handleSubmit} className="contact-form">
             <div className="row">
               <input
                 type="text"
@@ -69,7 +78,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* ✅ PHONE ADDED */}
             <input
               type="tel"
               name="phone"
@@ -87,12 +95,14 @@ const ContactPage = () => {
               required
             />
 
-            <button type="submit">Send Message</button>
+            {/* ✅ SCOPED BUTTON */}
+            <button type="submit" className="contact-submit-btn">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
 
-      {/* FOOTER */}
       <Footer />
       <WhatsAppButton />
     </>

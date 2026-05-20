@@ -9,7 +9,9 @@ import sweetsImages from "../assets/images/sweets";
 import '../styles/product.css';
 import '../styles/filter.css';
 
-// Fallback image asset
+import { useNavigate } from 'react-router-dom';
+
+import heroImg from '../assets/images/img2.jpg';
 const placeholderImage = 'https://via.placeholder.com/400x400?text=Product+Image';
 
 // EVERY SINGLE SPECIFIC PRODUCT COMBINED BY CATEGORY
@@ -512,6 +514,13 @@ const Product = () => {
           )}
         </main>
       </div>
+
+      {/* WhatsApp Button */}
+      <a href="https://wa.me/#" className="whatsapp-floating-btn" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 32 32" className="whatsapp-icon">
+          <path d="M16 2a13 13 0 0 0-11.27 19.51L3 29l7.73-2A13 13 0 1 0 16 2zm6.75 18.39c-.3.84-1.48 1.54-2.42 1.63-.64.06-1.47.09-3.79-.88a10.93 10.93 0 0 1-4.82-4.25 5.09 5.09 0 0 1-1.07-2.71 3.2 3.2 0 0 1 1-2.4c.18-.18.4-.26.6-.26h.43c.13 0 .3.05.44.38l.94 2.27c.09.21.14.45.01.71l-.42.53c-.13.16-.27.35-.12.61a7.8 7.8 0 0 0 2.45 3.06 6.47 6.47 0 0 0 3.26 1.48c.31.05.49 0 .68-.21l.62-.83c.18-.24.37-.2.61-.11l2.31 1.09c.24.12.37.18.43.29.07.13.07.72-.23 1.56z" fill="#fff"/>
+        </svg>
+      </a>
 
       <Footer />
       <WhatsAppButton />
