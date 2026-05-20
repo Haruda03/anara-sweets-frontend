@@ -48,7 +48,7 @@ const ContactPage = () => {
           <div className="contact-info">
             <p><b>Address:</b> Jaffna, Sri Lanka</p>
             <p><b>Phone:</b> +94 75 275 3522</p>
-            <p><b>Email:</b> info@anarasweets.com</p>
+            <p><b>Email:</b> anarasweets.inc@gmail.com </p>
           </div>
         </div>
 
