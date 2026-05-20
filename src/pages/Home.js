@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import "../styles/home.css";
-import { FaWhatsapp } from "react-icons/fa";
+import WhatsAppButton from "../components/WhatsAppButton";
+
 
 // Import all images (multiple angles/variants per product)
 import mysorePak1 from "../assets/images/MYSORE PAK.jpg";
@@ -981,16 +982,10 @@ const Home = () => {
       <TrustedReviewsSection />
 
 
-      <a
-        href="https://wa.me/94752753522"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaWhatsapp />
-      </a>
+      
 
       <Footer />
+      <WhatsAppButton />
     </>
   );
 };
