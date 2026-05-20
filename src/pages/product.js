@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 import WhatsAppButton from "../components/WhatsAppButton";
 import sweetsImages from "../assets/images/sweets";
 import '../styles/product.css';
-import { useNavigate } from 'react-router-dom'; // Added navigation hook import
 
 // Webpack Context for asset bundling fallbacks
 const images = require.context(
