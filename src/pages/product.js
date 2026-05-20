@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/product.css';
-import { useNavigate } from 'react-router-dom';
-import WhatsAppButton from '../components/WhatsAppButton';
+import { useNavigate } from 'react-router-dom'; // Added navigation hook import
 
 const images = require.context(
   '../assets/images',
