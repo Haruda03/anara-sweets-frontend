@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import "../styles/home.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import WhatsAppButton from "../components/WhatsAppButton";
 
@@ -168,13 +168,13 @@ const bestSellers = [
     price: 96.00,
     images: [chocolateBrownies1, chocolateBrownies2, chocolateBrownies3],
   },
-  {
-    id: 1,
-    name: "Turkish Delight",
+    {
+    id: 1,  // CHANGED: Mysore Pak instead of Turkish Delight
+    name: "Mysore Pak",
     rating: 5,
-    reviews: 130,
-    price: 86.00,
-    images: [turkishDelight1, turkishDelight2, turkishDelight3],
+    reviews: 207,
+    price: 197.00,
+    images: [mysorePak1, mysorePak2, mysorePak3],
   },
   {
     id: 2,
