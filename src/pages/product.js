@@ -95,7 +95,6 @@ const Product = () => {
     let filtered = products.filter((product) => {
       const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
       const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-      // Note: showOutOfStock is not used as we don't have stock data, kept for future use
       return matchesPrice && matchesCategory;
     });
 
@@ -139,6 +138,11 @@ const Product = () => {
 
   const fillLeft = `${(minPrice / MAX_PRICE_LIMIT) * 100}%`;
   const fillRight = `${100 - (maxPrice / MAX_PRICE_LIMIT) * 100}%`;
+
+  // Debug function to verify product mapping
+  console.log("Products data:", products);
+  console.log("Coconut Burfi product:", products.find(p => p.name === "Coconut Burfi"));
+  console.log("Chocolate Brownies product:", products.find(p => p.name === "Chocolate Brownies"));
 
   return (
     <div className="traditional-page-wrapper">

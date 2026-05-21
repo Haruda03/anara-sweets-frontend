@@ -116,7 +116,10 @@ function ProductDetails() {
 
   // Safe Multi-Product Add To Cart Configuration
   const handleAddToCart = () => {
-    if (activeWeight <= 0) return;
+    if (activeWeight <= 0) {
+      alert("Please select a valid weight");
+      return;
+    }
 
     const existingCart = JSON.parse(safeStorage.getItem('shopCart')) || [];
     
@@ -209,8 +212,10 @@ function ProductDetails() {
   };
 
   const handleClearCart = () => {
-    safeStorage.removeItem('shopCart');
-    updateCartCount();
+    if (window.confirm("Are you sure you want to clear your entire cart?")) {
+      safeStorage.removeItem('shopCart');
+      updateCartCount();
+    }
   };
 
   const modalGrandTotal = modalCartItems.reduce((sum, item) => sum + item.itemTotal, 0);
