@@ -8,9 +8,9 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 // Configuration for EmailJS
 // Please replace these with your actual Service ID, Template ID, and Public Key from your EmailJS account.
-const EMAILJS_SERVICE_ID = "service_jol66nc";
-const EMAILJS_TEMPLATE_ID = "template_clfwlyn";
-const EMAILJS_PUBLIC_KEY = "k7Ol6BAsZIgfOe9BU";
+const EMAILJS_SERVICE_ID = "service_76s89yl";
+const EMAILJS_TEMPLATE_ID = "template_r2wl90c";
+const EMAILJS_PUBLIC_KEY = "-ST1tkTtBkBvbRDwf";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ const ContactPage = () => {
       )
       .then(
         (response) => {
-          setSuccessMsg("✅ Your message has been sent successfully!");
+          setSuccessMsg("✨ Thanks for contacting us! Our team will reach out shortly.");
           setFormData({
             name: "",
             email: "",
@@ -65,7 +65,7 @@ const ContactPage = () => {
         },
         (error) => {
           console.error("FAILED to send message via EmailJS:", error);
-          setErrorMsg("❌ Failed to send your message. Please check your credentials or try again later.");
+          setErrorMsg("🚫 Unable to send message right now. Please try again later.");
           setIsSending(false);
         }
       );
@@ -74,6 +74,8 @@ const ContactPage = () => {
   return (
     <>
       <Navbar />
+   
+    
 
       <div className="contact-page">
         <div className="contact-header">
@@ -91,24 +93,18 @@ const ContactPage = () => {
         <div className="contact-box">
           <h2>Contact Us</h2>
 
-          {successMsg && <div className="success-msg">{successMsg}</div>}
-          {errorMsg && (
-            <div
-              className="error-msg"
-              style={{
-                background: "#ffebee",
-                color: "#c62828",
-                padding: "12px",
-                borderRadius: "8px",
-                marginBottom: "15px",
-                textAlign: "center",
-                fontWeight: "500",
-                border: "1px solid #ef9a9a"
-              }}
-            >
-              {errorMsg}
-            </div>
-          )}
+          {/* Popup Messages */}
+{successMsg && (
+  <div className="popup-message success-popup">
+    {successMsg}
+  </div>
+)}
+
+{errorMsg && (
+  <div className="popup-message error-popup">
+    {errorMsg}
+  </div>
+)}
 
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="row">
