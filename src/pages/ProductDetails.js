@@ -38,6 +38,31 @@ const safeStorage = {
   }
 };
 
+const ClearCartToast = ({ closeToast, handleConfirm }) => {
+  return (
+    <div>
+      <p>Are you sure you want to clear your entire cart?</p>
+
+      <div>
+        <button
+          onClick={() => {
+            handleConfirm();
+            closeToast();
+          }}
+        >
+          Yes
+        </button>
+
+        <button onClick={closeToast}>
+          No
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
+
 function ProductDetails() {
   const { id } = useParams();
   // Convert id to number for comparison
