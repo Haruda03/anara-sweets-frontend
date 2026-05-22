@@ -330,6 +330,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.3s ease;
    font-family: "HolenVintage", sans-serif;
+   transform: translateZ(0);
 }
 
 @keyframes slideDown {
