@@ -43,10 +43,12 @@
 
 h2 {
   font-family: "HolenVintage", sans-serif;
+  font-size: 28px;
 }
 
 p {
   font-family: "Outfit", sans-serif;
+  font-size: 16px;
 }
 
 
@@ -887,6 +889,7 @@ height: 330px;
   font-weight: 700;
   letter-spacing: 3px;
   border-radius: 4px;
+  font-family: "HolenVintage", sans-serif;
 }
 
 .bestseller-add-btn:hover {
@@ -982,6 +985,7 @@ height: 330px;
 .flavourful-section {
   padding: 80px 60px;
   background: #f3f3f3;
+  font-family: "Outfit", sans-serif;
 }
 
 .flavourful-container {
@@ -1266,7 +1270,7 @@ height: 330px;
   letter-spacing: 4px;
   color: #666;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .about-heading {
