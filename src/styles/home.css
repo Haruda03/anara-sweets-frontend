@@ -1550,7 +1550,13 @@ height: 330px;
 .special-border {
   height: 18px;
   width: 100%;
-  background: repeating-linear-gradient(90deg, #ead8c2 0px, #ead8c2 10px, #f5efe4 10px, #f5efe4 20px);
+  background: repeating-linear-gradient(
+    90deg,
+    #ead8c2 0px,
+    #ead8c2 10px,
+    #f5efe4 10px,
+    #f5efe4 20px
+  );
   border-top: 2px solid #ead8c2;
   border-bottom: 2px solid #ead8c2;
 }
@@ -1571,7 +1577,7 @@ height: 330px;
 
 .special-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* ALWAYS 4 COLUMNS */
   gap: 40px;
   align-items: center;
 }
@@ -1582,6 +1588,8 @@ height: 330px;
   align-items: center;
   text-align: center;
 }
+
+/* ================= IMAGE ================= */
 
 .special-image-wrapper {
   width: 220px;
@@ -1602,6 +1610,8 @@ height: 330px;
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* ================= TEXT ================= */
 
 .special-text {
   margin-top: 22px;
@@ -1626,53 +1636,72 @@ height: 330px;
   font-weight: 600;
 }
 
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
 @media (max-width: 992px) {
   .special-container {
-    padding: 60px 30px;
+    padding: 60px 20px;
   }
+
   .special-heading {
-    font-size: 38px;
+    font-size: 36px;
     margin-bottom: 50px;
   }
-  .special-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 20px;
-  }
-  .special-image-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-  .large-card .special-image-wrapper {
-    width: 220px;
-    height: 220px;
-  }
-  .special-text {
-    font-size: 18px;
-  }
-}
 
-@media (max-width: 768px) {
-  .special-container {
-    padding: 50px 20px;
-  }
-  .special-heading {
-    font-size: 30px;
-    margin-bottom: 40px;
-    line-height: 1.3;
-  }
   .special-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr); /* KEEP 4 */
+    gap: 20px;
   }
+
   .special-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .large-card .special-image-wrapper {
     width: 170px;
     height: 170px;
   }
+
   .special-text {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
+/* Mobile */
+@media (max-width: 600px) {
+  .special-container {
+    padding: 40px 10px;
+  }
+
+  .special-heading {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .special-grid {
+    grid-template-columns: repeat(4, 1fr); /* STILL 4 IN A ROW */
+    gap: 10px;
+  }
+
+  .special-image-wrapper {
+    width: 70px;
+    height: 70px;
+    padding: 4px;
+  }
+
+  .large-card .special-image-wrapper {
+    width: 85px;
+    height: 85px;
+  }
+
+  .special-text {
+    font-size: 10px;
+    margin-top: 10px;
+    line-height: 1.2;
+  }
+}
 /* ==================== TASTED & TRUSTED BY MILLIONS SECTION ==================== */
 
 .trusted-section {
