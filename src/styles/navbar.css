@@ -6,7 +6,7 @@
 .top-bar-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 8px 2rem;   /* 👈 add vertical padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-  transform: translateY(-8px);
+  transform: translateY(0px);
 }
 
 .social-icon:hover {
