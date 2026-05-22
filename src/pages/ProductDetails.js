@@ -38,28 +38,28 @@ const safeStorage = {
   }
 };
 
-const ClearCartToast = ({ closeToast, handleConfirm }) => {
-  return (
-    <div>
-      <p>Are you sure you want to clear your entire cart?</p>
+// const ClearCartToast = ({ closeToast, handleConfirm }) => {
+//   return (
+//     <div>
+//       <p>Are you sure you want to clear your entire cart?</p>
 
-      <div>
-        <button
-          onClick={() => {
-            handleConfirm();
-            closeToast();
-          }}
-        >
-          Yes
-        </button>
+//       <div>
+//         <button
+//           onClick={() => {
+//             handleConfirm();
+//             closeToast();
+//           }}
+//         >
+//           Yes
+//         </button>
 
-        <button onClick={closeToast}>
-          No
-        </button>
-      </div>
-    </div>
-  );
-};
+//         <button onClick={closeToast}>
+//           No
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
 
 
 
