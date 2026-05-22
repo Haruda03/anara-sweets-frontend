@@ -6,12 +6,10 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import Product from './pages/product';
 
-import AllSweets from "./pages/AllSweets";
-import AllTraditional from './pages/AllTraditional';
-import AllHealthMix from './pages/AllHealthMix';
+
 
 import ProductDetails from './pages/ProductDetails';
-import AllItems from './pages/AllItems';
+
 import PrivacyPolicy from './pages/Policy/PrivacyPolicy';
 import ShippingPolicy from './pages/Policy/ShippingPolicy';
 import RefundPolicy from './pages/Policy/RefundPolicy';
@@ -43,12 +41,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<ProductDetails />} />
 
-          {/* Collections */}
-          <Route path="/sweets" element={<AllSweets />} />
-          <Route path="/all-traditional" element={<AllTraditional />} />
-          <Route path="/all-health-mix" element={<AllHealthMix />} />
-          <Route path="/all-items" element={<AllItems />} />
-          
+         
 
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />

@@ -330,13 +330,7 @@ const Product = () => {
                 <div className="product-info">
                   <h3 className="product-name">{product.name}</h3>
                   
-                  <div className="rating-section">
-                    <div className="stars" aria-label={`${product.rating} out of 5 stars`}>
-                      {'★'.repeat(product.rating)}
-                      {'☆'.repeat(5 - product.rating)}
-                    </div>
-                    <span className="review-count">({product.reviews} reviews)</span>
-                  </div>
+                  
 
                   <div className="product-price">Rs. {product.price}.00</div>
                   <button 

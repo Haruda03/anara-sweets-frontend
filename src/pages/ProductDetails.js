@@ -282,13 +282,7 @@ function ProductDetails() {
         <div className="details-info-panel">
           <h1 className="product-main-heading">{product.name}</h1>
           
-          <div className="product-rating-summary">
-            <div className="star-rating-row">
-              {'★'.repeat(product.rating)}
-              {'☆'.repeat(5 - product.rating)}
-            </div>
-            <span className="review-numerical-count">{product.reviews} reviews</span>
-          </div>
+          
 
           <div className="product-price-display">
             Rs. {totalPrice > 0 ? totalPrice : 0}.00 

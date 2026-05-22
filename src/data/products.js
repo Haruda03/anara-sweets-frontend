@@ -40,7 +40,6 @@ export const products = [
     name: "Mysore Pak",
     price: 197,
     rating: 5,
-    reviews: 207,
     isBestSeller: true,
     category: "sweets",
     images: [mysorePak1, mysorePak2, mysorePak1]
@@ -50,7 +49,6 @@ export const products = [
     name: "Rava Kesari",
     price: 105,
     rating: 5,
-    reviews: 196,
     isBestSeller: true,
     category: "sweets",
     images: [ravaKesari1, ravaKesari2, ravaKesari1]
@@ -60,7 +58,6 @@ export const products = [
     name: "Chocolate Brownies",
     price: 96,
     rating: 5,
-    reviews: 111,
     isBestSeller: true,
     category: "sweets",
     images: [chocolateBrownies1, chocolateBrownies2, chocolateBrownies1]
@@ -70,7 +67,6 @@ export const products = [
     name: "Coconut Burfi",
     price: 67,
     rating: 5,
-    reviews: 111,
     isBestSeller: true,
     category: "sweets",
     images: [coconutBurfi1, coconutBurfi2, coconutBurfi1]
@@ -80,7 +76,6 @@ export const products = [
     name: "Boondi Laddu",
     price: 86,
     rating: 5,
-    reviews: 72,
     isBestSeller: true,
     category: "sweets",
     images: [boondiLaddu1, boondiLaddu2, boondiLaddu1]
@@ -90,7 +85,6 @@ export const products = [
     name: "Turkish Delight",
     price: 86,
     rating: 5,
-    reviews: 72,
     isBestSeller: true,
     category: "sweets",
     images: [turkishDelight1, turkishDelight2, turkishDelight1]
@@ -100,9 +94,8 @@ export const products = [
     name: "Egg Flour",
     price: 149,
     rating: 4,
-    reviews: 12,
     isBestSeller: false,
-    category: "snacks",
+    category: "healthmix",
     images: [eggFlour1, eggFlour2, eggFlour1]
   },
   {
@@ -110,9 +103,8 @@ export const products = [
     name: "Health Mix",
     price: 175,
     rating: 4,
-    reviews: 32,
     isBestSeller: true,
-    category: "health",
+    category: "healthmix",
     images: [healthMix1, healthMix2, healthMix1]
   },
   {
@@ -120,9 +112,8 @@ export const products = [
     name: "Kara Boondi",
     price: 155,
     rating: 4,
-    reviews: 27,
     isBestSeller: false,
-    category: "snacks",
+    category: "Traditional",
     images: [karaBoondi1, karaBoondi2, karaBoondi1]
   },
   {
@@ -130,9 +121,8 @@ export const products = [
     name: "Kara Sippi",
     price: 168,
     rating: 4,
-    reviews: 19,
     isBestSeller: false,
-    category: "snacks",
+    category: "Traditional",
     images: [karaSippi1, karaSippi2, karaSippi1]
   },
   {
@@ -140,9 +130,8 @@ export const products = [
     name: "Kuchchi Murukku",
     price: 172,
     rating: 4,
-    reviews: 56,
     isBestSeller: true,
-    category: "snacks",
+    category: "Traditional",
     images: [kuchchiMurukku1, kuchchiMurukku1, kuchchiMurukku1]
   },
   {
@@ -150,9 +139,8 @@ export const products = [
     name: "Mixture",
     price: 158,
     rating: 4,
-    reviews: 94,
     isBestSeller: false,
-    category: "snacks",
+    category: "Traditional",
     images: [mixture1, mixture2, mixture1]
   },
   {
@@ -160,9 +148,8 @@ export const products = [
     name: "Mullu Murukku",
     price: 164,
     rating: 4,
-    reviews: 41,
     isBestSeller: false,
-    category: "snacks",
+    category: "Traditional",
     images: [mulluMurukku1, mulluMurukku2, mulluMurukku3]
   },
   {
@@ -170,9 +157,8 @@ export const products = [
     name: "Payatham Urundai",
     price: 185,
     rating: 4,
-    reviews: 23,
     isBestSeller: false,
-    category: "sweets",
+    category: "Traditional",
     images: [payathamUrundai1, payathamUrundai2, payathamUrundai1]
   },
   {
@@ -180,9 +166,8 @@ export const products = [
     name: "Rava Laddu",
     price: 179,
     rating: 4,
-    reviews: 68,
     isBestSeller: true,
-    category: "sweets",
+    category: "Traditional",
     images: [ravaLaddu1, ravaLaddu2, ravaLaddu3]
   },
   {
@@ -190,9 +175,8 @@ export const products = [
     name: "Rich Laddu",
     price: 199,
     rating: 5,
-    reviews: 88,
     isBestSeller: true,
-    category: "sweets",
+    category: "Traditional",
     images: [richLaddu1, richLaddu2, richLaddu1]
   },
   {
@@ -200,9 +184,28 @@ export const products = [
     name: "Thattu Vadai",
     price: 143,
     rating: 4,
-    reviews: 37,
     isBestSeller: false,
-    category: "snacks",
+    category: "Traditional",
     images: [thattuVadai1, thattuVadai1, thattuVadai1]
-  }
+  },
+  {
+    id: 18,
+    name: "Sweets combo",
+    price: 143,
+    rating: 4,
+    isBestSeller: false,
+    category: "Combos",
+    images: [thattuVadai1, thattuVadai1, thattuVadai1]
+  },
+  {
+    id: 19,
+    name: "Sweets combo1",
+    price: 143,
+    rating: 4,
+    isBestSeller: false,
+    category: "Combos",
+    images: [thattuVadai1, thattuVadai1, thattuVadai1]
+  },
+
+
 ];
