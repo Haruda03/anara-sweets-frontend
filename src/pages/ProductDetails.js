@@ -47,12 +47,12 @@ function ProductDetails() {
   // State Management
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState('');
-  const [weightType, setWeightType] = useState('preset'); 
-  const [selectedWeight, setSelectedWeight] = useState(150); 
+  const [weightType, setWeightType] = useState('preset');
+  const [selectedWeight, setSelectedWeight] = useState(150);
   const [customWeight, setCustomWeight] = useState('');
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [cartCount, setCartCount] = useState(0);
-  
+
   // Modal Interactive State to monitor modifications in real-time
   const [modalCartItems, setModalCartItems] = useState([]);
 
@@ -122,7 +122,7 @@ function ProductDetails() {
     }
 
     const existingCart = JSON.parse(safeStorage.getItem('shopCart')) || [];
-    
+
     const existingItemIndex = existingCart.findIndex(
       (item) => item.id === product.id && item.weight === activeWeight
     );
@@ -143,14 +143,14 @@ function ProductDetails() {
 
     safeStorage.setItem('shopCart', JSON.stringify(existingCart));
     updateCartCount();
-   toast.success(
-   `${product.name} (${activeWeight}g) added to cart`,
-   {
-      position: "top-right",
-      autoClose: 2500,
-      hideProgressBar: false,
-   }
-);
+    toast.success(
+      `${product.name} (${activeWeight}g) added to cart`,
+      {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+      }
+    );
   };
 
   // Open confirmation view and calculate data snapshot cleanly without tricky dependency chains
@@ -190,11 +190,11 @@ function ProductDetails() {
   const sendWhatsAppMessage = () => {
     if (modalCartItems.length === 0) return;
 
-    const phoneNumber = "+94752753522"; 
-    
+    const phoneNumber = "+94752753522";
+
     let message = `*NEW ORDER SUBMISSION*\n`;
     message += `=========================\n\n`;
-    
+
     let grandTotal = 0;
 
     modalCartItems.forEach((item, index) => {
@@ -208,10 +208,10 @@ function ProductDetails() {
 
     message += `\n*GRAND TOTAL PRICE: Rs. ${grandTotal}.00*\n\n`;
     message += `Please process my items. Thank you!`;
-    
+
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-    
+
     // Cleanup storage configurations after dispatching user
     safeStorage.removeItem('shopCart');
     updateCartCount();
@@ -255,7 +255,7 @@ function ProductDetails() {
       }
     );
   };
-  
+
   const modalGrandTotal = modalCartItems.reduce((sum, item) => sum + item.itemTotal, 0);
 
   return (
@@ -267,20 +267,20 @@ function ProductDetails() {
           <nav className="breadcrumb-path">
             <Link to="/">Home</Link> &gt; <Link to="/product">Products</Link> &gt; <span className="current-node">{product.name}</span>
           </nav>
-          
+
           <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
             <div style={{ fontSize: '16px', color: '#1a1a1a', fontWeight: '600' }}>
               🛒 Cart Items: <span style={{ color: '#d031d0', fontSize: '14px' }}>{cartCount}</span>
             </div>
             {cartCount > 0 && (
-              <button 
+              <button
                 onClick={handleClearCart}
                 style={{ fontSize: '14px', background: 'none', border: 'none', color: '#5d0e5a', cursor: 'pointer', textDecoration: 'underline', padding: 0 }}
               >
                 Clear Cart
               </button>
             )}
-            <div className="next-nav-pointer" style={{ marginLeft: '10px' ,fontSize: '14px'}}>
+            <div className="next-nav-pointer" style={{ marginLeft: '10px', fontSize: '14px' }}>
               <Link to={`/product/${product.id === products.length ? 1 : product.id + 1}`}>Next &gt;</Link>
             </div>
           </div>
@@ -293,23 +293,23 @@ function ProductDetails() {
           <div className="main-preview-frame">
             <div className="product-detail-image-wrapper">
 
-  {/* ICON BADGE */}
-  <img src={badgeIcon} alt="badge" className="product-detail-badge-icon" />
+              {/* ICON BADGE */}
+              <img src={badgeIcon} alt="badge" className="product-detail-badge-icon" />
 
-  <img
-    src={selectedImage || (product.images && product.images[0])}
-    alt={product.name}
-    className="active-display-img"
-  />
-</div>
+              <img
+                src={selectedImage || (product.images && product.images[0])}
+                alt={product.name}
+                className="active-display-img"
+              />
+            </div>
           </div>
 
           <div className="thumbnail-strip-row">
             {galleryThumbnails.map((thumbSrc, index) => {
               const isActive = selectedImage === thumbSrc;
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`thumb-box-item ${isActive ? 'active-border' : ''}`}
                   onClick={() => setSelectedImage(thumbSrc)}
                 >
@@ -323,12 +323,12 @@ function ProductDetails() {
         {/* Right Info Section */}
         <div className="details-info-panel">
           <h1 className="product-main-heading">{product.name}</h1>
-          
+
           <div className="product-price-display">
-            Rs. {totalPrice > 0 ? totalPrice : 0}.00 
+            Rs. {totalPrice > 0 ? totalPrice : 0}.00
             {quantity > 1 && <span className="price-each-label"> (Rs. {calculatedPricePerUnit}.00 each)</span>}
           </div>
-          
+
           <div className="facility-shipping-banner">
             <span className="truck-icon">🚚</span> Ships Directly from Our Production Facility
           </div>
@@ -345,11 +345,11 @@ function ProductDetails() {
                     onClick={() => handlePresetWeightChange(wt)}
                     className={isSelected ? 'active-weight-btn' : ''}
                   >
-                    {wt >= 1000 ? `${wt/1000}kg` : `${wt}g`}
+                    {wt >= 1000 ? `${wt / 1000}kg` : `${wt}g`}
                   </button>
                 );
               })}
-              
+
               <div className="custom-weight-wrapper">
                 <input
                   type="number"
@@ -377,9 +377,9 @@ function ProductDetails() {
             <button type="button" className="primary-cart-action-btn" onClick={handleAddToCart}>
               ADD TO CART
             </button>
-            <button 
-              type="button" 
-              className="secondary-buy-action-btn whatsapp-order-btn" 
+            <button
+              type="button"
+              className="secondary-buy-action-btn whatsapp-order-btn"
               onClick={handleOpenConfirmationModal}
               disabled={activeWeight <= 0 && cartCount === 0}
             >
@@ -408,7 +408,7 @@ function ProductDetails() {
       </div>
 
       {/* Interactive Confirmation Step Overlay Modal Dashboard */}
-     {showConfirmModal && (
+      {showConfirmModal && (
         <div className="order-modal-backdrop">
           <div className="order-modal-content">
             <h3 className="modal-title">
@@ -418,7 +418,7 @@ function ProductDetails() {
             <div className="modal-body-details">
               {modalCartItems.map((item, idx) => (
                 <div key={idx} className="modal-item-row">
-                  
+
                   <div className="modal-item-info">
                     <p className="modal-item-title">
                       <strong>
@@ -477,7 +477,7 @@ function ProductDetails() {
       <Footer />
       <WhatsAppButton />
       <ToastContainer />
-      
+
     </div>
   );
 }
