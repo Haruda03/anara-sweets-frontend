@@ -17,6 +17,13 @@
   position: relative;
 }
 
+.clear-filters-btn{
+  background: #7952b3;
+  color: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 2px;
+}
+
 .mobile-filter-btn,
 .filter-drawer-backdrop,
 .filter-drawer-close {
