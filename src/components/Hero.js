@@ -18,16 +18,14 @@ const Hero = () => {
           <h2 className="hero-subtitle">Anara sweets</h2>
 
           <h1 className="hero-title">
-            Sweet and Snacks
+            A Taste of Tradition, A Promise of Quality
+
           </h1>
 
-          <p className="hero-description">
-            ethnic SriLankan FLAVOUR'S{" "}
-            <span className="highlight">40+ Outlets</span>
-          </p>
+          
 
           <p className="hero-tagline">
-            HANDCRAFTED SWEETS & SAVOURIES
+            At Anara Sweets we offer a wide range of farsan, tempting sweets and other delicacies. We also use only the best quality ingredients in the preparation of our products, and each ingredient is sourced and imported from the finest in the world.
           </p>
 
           <Link to="/product" className="hero-btn">
