@@ -14,7 +14,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  
 }
 
 .hero-container {
@@ -23,19 +23,20 @@
   width: 100%;
   max-width: 1200px;
   padding: 20px;
+  margin-left: -70px;
 }
 
 .hero-content {
   max-width: 600px;
-  color: white;
+  color: rgb(10, 10, 10);
 }
 
 .hero-subtitle {
   font-family: 'Outfit' sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5 rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #f39c12;
+  color: #8b1185;
   margin-bottom: 10px;
 }
 
@@ -49,19 +50,20 @@
 
 .hero-description {
   font-family: 'Outfit' sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin-bottom: 10px;
 }
 
 .highlight {
-  color: #ffcc70;
+  color: #b572c6e9 ;
   font-weight: bold;
 }
 
 .hero-tagline {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 30px;
+  
 }
 
 .hero-btn {
