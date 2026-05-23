@@ -256,7 +256,7 @@ const Product = () => {
           </div>
 
           {/* OUT OF STOCK SECTION */}
-          <div className="filter-section">
+          {/* <div className="filter-section">
             <div className="section-header">
               <h4>Availability</h4>
               <div className="toggle-buttons">
@@ -274,7 +274,7 @@ const Product = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* PRICE RANGE FILTER */}
           <div className="filter-section price-section-wrapper">
