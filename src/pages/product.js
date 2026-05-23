@@ -6,6 +6,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import '../styles/product.css';
 import { products } from "../data/products";
 import { filterProductsBySearch } from "../utils/searchProducts";
+import badgeIcon from "../assets/images/icon.png";
 
 const SORT_OPTIONS = [
   'Alphabetically, A-Z',
@@ -426,12 +427,17 @@ const Product = () => {
                   if (e.key === 'Enter') navigate(`/product/${product.id}`);
                 }}
               >
-                <div className="image-container">
-                  {product.isBestSeller && (
-                    <div className="badge best-seller-badge">Best Seller</div>
-                  )}
-                  <ProductCardImageSlider imagesList={product.images} productName={product.name} />
-                </div>
+                <div className="image-container product-image-wrapper">
+
+  {/* ICON BADGE (ALL PRODUCTS) */}
+  <img src={badgeIcon} alt="badge" className="product-badge-icon" />
+
+ 
+  <ProductCardImageSlider
+    imagesList={product.images}
+    productName={product.name}
+  />
+</div>
 
                 <div className="product-info">
                   <h3 className="product-name">{product.name}</h3>

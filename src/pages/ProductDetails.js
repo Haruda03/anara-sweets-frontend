@@ -7,6 +7,7 @@ import '../styles/productDetails.css';
 import { products } from "../data/products";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import badgeIcon from "../assets/images/icon.png";
 
 // Safe Storage Engine Fallback Strategy for Security Access Exceptions
 const safeStorage = {
@@ -290,13 +291,17 @@ function ProductDetails() {
         {/* Left: Media Block Section */}
         <div className="details-media-gallery">
           <div className="main-preview-frame">
-            {product.isBestSeller && (
-              <div className="details-ribbon-tag">
-                <span className="stars-line">★★★</span>
-                <span className="tag-text">Best Seller</span>
-              </div>
-            )}
-            <img src={selectedImage || (product.images && product.images[0])} alt={product.name} className="active-display-img" />
+            <div className="product-detail-image-wrapper">
+
+  {/* ICON BADGE */}
+  <img src={badgeIcon} alt="badge" className="product-detail-badge-icon" />
+
+  <img
+    src={selectedImage || (product.images && product.images[0])}
+    alt={product.name}
+    className="active-display-img"
+  />
+</div>
           </div>
 
           <div className="thumbnail-strip-row">

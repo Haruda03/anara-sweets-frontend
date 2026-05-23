@@ -1375,3 +1375,18 @@ html {
     margin: 10px 0 12px;
   }
 }
+
+.product-image-wrapper {
+  position: relative;
+}
+
+/* ICON TOP LEFT */
+.product-badge-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 26px;
+  height: 26px;
+  z-index: 5;
+  pointer-events: none;
+}
