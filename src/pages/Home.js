@@ -6,6 +6,7 @@ import "../styles/home.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import badgeIcon from "../assets/images/icon.png";
 
 import WhatsAppButton from "../components/WhatsAppButton";
 
@@ -78,19 +79,10 @@ import thattuVadai1 from "../assets/images/THATTU VADAI1.jpg";
 import thattuVadai2 from "../assets/images/THATTU VADAI1.jpg";
 import thattuVadai3 from "../assets/images/THATTU VADAI1.jpg";
 
-// Video imports for the new reels section
-// import reel1 from "../assets/images/anara.mp4";
-// import reel2 from "../assets/images/anara.mp4";
-// import reel3 from "../assets/images/anara.mp4";
-// import reel4 from "../assets/images/anara.mp4";
-// import reel5 from "../assets/images/anara.mp4";
-
-// Small images for video reels (thumbnails)
-// import thumbnail1 from "../assets/images/img1.jpg";
-// import thumbnail2 from "../assets/images/img1.jpg";
-// import thumbnail3 from "../assets/images/img1.jpg";
-// import thumbnail4 from "../assets/images/img1.jpg";
-// import thumbnail5 from "../assets/images/img1.jpg";
+// Press Features Images
+import behindwoodsLogo from "../assets/images/img1.jpg";
+import vikatanLogo from "../assets/images/img2.jpg";
+import theHinduLogo from "../assets/images/img3.jpg";
 
 // Flavourful Delights Section Images
 import savouriesImg from "../assets/images/img1.jpg";
@@ -111,55 +103,10 @@ import handmadeIcon from "../assets/images/icon/handmade-icon.png";
 import noPreservativesIcon from "../assets/images/icon/no-preservatives-icon.png";
 import shippingIcon from "../assets/images/icon/shipping-icon.png";
 
-
-// Data for the video reels section
-// const reels = [
-//   {
-//     id: 1,
-//     video: reel1,
-//     title: "Glimpse of Anara Top Seller Achu Murukku",
-//     product: "Achu Murukku - Kaaram",
-//     price: 67,
-//     thumbnail: thumbnail1,
-//   },
-//   {
-//     id: 2,
-//     video: reel2,
-//     title: "A glimpse on how we make our Famous Thattai",
-//     product: "Thattai",
-//     price: 71,
-//     thumbnail: thumbnail2,
-//   },
-//   {
-//     id: 3,
-//     video: reel3,
-//     title: "Sneakpeek of Juicy Jamoon",
-//     product: "BIG JAMUN JARS",
-//     price: 145,
-//     thumbnail: thumbnail3,
-//   },
-//   {
-//     id: 4,
-//     video: reel4,
-//     title: "We have something Special for Christmas",
-//     product: "Pocket Plum Cake",
-//     price: 50,
-//     thumbnail: thumbnail4,
-//   },
-//   {
-//     id: 5,
-//     video: reel5,
-//     title: "It's Yummy",
-//     product: "Thengai Paal Murukku",
-//     price: 130,
-//     thumbnail: thumbnail5,
-//   },
-// ];
-
 // Data for Best Sellers section with multiple images per product - CORRECTED IDs
 const bestSellers = [
   {
-    id: 4,  // Corrected: Coconut Burfi should have ID 4
+    id: 4,
     name: "Coconut Burfi",
     rating: 5,
     reviews: 483,
@@ -167,15 +114,15 @@ const bestSellers = [
     images: [coconutBurfi1, coconutBurfi2, coconutBurfi3],
   },
   {
-    id: 3,  // Corrected: Chocolate Brownies should have ID 3
+    id: 3,
     name: "Chocolate Brownies",
     rating: 5,
     reviews: 111,
     price: 96.00,
     images: [chocolateBrownies1, chocolateBrownies2, chocolateBrownies3],
   },
-    {
-    id: 1,  // CHANGED: Mysore Pak instead of Turkish Delight
+  {
+    id: 1,
     name: "Mysore Pak",
     rating: 5,
     reviews: 207,
@@ -190,7 +137,6 @@ const bestSellers = [
     price: 105.00,
     images: [ravaKesari1, ravaKesari2, ravaKesari3],
   },
-
 ];
 
 // Flavourful Delights Section Data
@@ -219,6 +165,28 @@ const flavourfulDelights = [
     id: 5,
     name: "Combos",
     image: combosImg,
+  },
+];
+
+// Press Features Data
+const pressFeatures = [
+  {
+    id: 1,
+    name: "Behindwoods",
+    logo: behindwoodsLogo,
+    alt: "Behindwoods",
+  },
+  {
+    id: 2,
+    name: "Vikatan",
+    logo: vikatanLogo,
+    alt: "Vikatan",
+  },
+  {
+    id: 3,
+    name: "The Hindu",
+    logo: theHinduLogo,
+    alt: "The Hindu",
   },
 ];
 
@@ -408,7 +376,7 @@ const combos = [
     isBestSeller: true
   },
   {
-    id: 3,  // CORRECTED: Chocolate Brownies has ID 3
+    id: 3,
     name: "Chocolate Brownies",
     price: 96,
     images: [chocolateBrownies1, chocolateBrownies2, chocolateBrownies3],
@@ -416,7 +384,7 @@ const combos = [
     isBestSeller: true
   },
   {
-    id: 4,  // CORRECTED: Coconut Burfi has ID 4
+    id: 4,
     name: "Coconut Burfi",
     price: 67,
     images: [coconutBurfi1, coconutBurfi2, coconutBurfi3],
@@ -529,89 +497,6 @@ const combos = [
   }
 ];
 
-// // Video reels section component
-// const ReelsSection = () => {
-//   const reelRef = useRef(null);
-//   const [hoveredReelId, setHoveredReelId] = useState(null);
-//   const [canScrollRight, setCanScrollRight] = useState(true);
-
-//   const checkScroll = () => {
-//     if (reelRef.current) {
-//       const { scrollLeft, scrollWidth, clientWidth } = reelRef.current;
-//       setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
-//     }
-//   };
-
-//   const scrollReel = (dir) => {
-//     if (!reelRef.current) return;
-//     const scrollAmount = 340;
-//     reelRef.current.scrollBy({
-//       left: dir === "left" ? -scrollAmount : scrollAmount,
-//       behavior: "smooth",
-//     });
-//     setTimeout(checkScroll, 300);
-//   };
-
-//   useEffect(() => {
-//     const container = reelRef.current;
-//     if (container) {
-//       container.addEventListener('scroll', checkScroll);
-//       checkScroll();
-//       return () => container.removeEventListener('scroll', checkScroll);
-//     }
-//   }, []);
-
-//   return (
-//     <section className="reels-section">
-//       <div className="reels-container" ref={reelRef}>
-//         {reels.map((reel) => (
-//           <div key={reel.id} className="reel-card">
-//             <div
-//               className="video-wrapper"
-//               onMouseEnter={() => setHoveredReelId(reel.id)}
-//               onMouseLeave={() => setHoveredReelId(null)}
-//             >
-//               <video
-//                 src={reel.video}
-//                 autoPlay
-//                 loop
-//                 muted
-//                 playsInline
-//                 disablePictureInPicture
-//                 controlsList="nodownload noplaybackrate nofullscreen"
-//                 className="reel-video"
-//               />
-//               {hoveredReelId === reel.id && (
-//                 <div className="video-overlay">
-//                   <p>{reel.title}</p>
-//                 </div>
-//               )}
-//             </div>
-//             <div className="reel-info">
-//               <div className="reel-thumbnail">
-//                 <img src={reel.thumbnail} alt={reel.product} />
-//               </div>
-//               <div className="reel-details">
-//                 <p className="reel-product-name">{reel.product}</p>
-//                 <p className="reel-price">Rs. {reel.price}.00</p>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {canScrollRight && (
-//         <button
-//           className="fixed-scroll-arrow right-end-arrow"
-//           onClick={() => scrollReel("right")}
-//         >
-//           &#8250;
-//         </button>
-//       )}
-//     </section>
-//   );
-// };
-
 // Best Sellers section component - Make entire card clickable - CORRECTED
 const BestSellersSection = () => {
   const bestSellersScrollRef = useRef(null);
@@ -668,24 +553,25 @@ const BestSellersSection = () => {
 
       <div className="bestsellers-scroll-container" ref={bestSellersScrollRef}>
         {bestSellers.map((item) => (
-          <div 
-            key={item.id} 
+          <div
+            key={item.id}
             className="bestseller-card"
             onClick={() => handleNavigate(item.id)}
             style={{ cursor: 'pointer' }}
           >
-            <div className="image-wrapper">
-              <ImageGallery
-                images={item.images}
-                productName={item.name}
-                onImageClick={() => handleNavigate(item.id)}
-              />
-            </div>
+            <div className="image-wrapper product-image-wrapper">
+  
+  {/* Badge Icon */}
+  <img src={badgeIcon} alt="badge" className="product-badge-icon" />
+
+  <ImageGallery
+    images={item.images}
+    productName={item.name}
+    onImageClick={() => handleNavigate(item.id)}
+  />
+</div>
             <div className="bestseller-card-body">
               <p className="bestseller-product-name">{item.name}</p>
-              {/* <p className="bestseller-reviews">
-                {'⭐'.repeat(item.rating)} <span>{item.reviews} reviews</span>
-              </p> */}
               <p className="bestseller-price">Rs. {item.price.toFixed(2)}</p>
             </div>
             <button
@@ -777,6 +663,24 @@ const AboutUsSection = () => {
             Every bite is a Celebration of Our Ethnic Indian flavours and Rich Heritage.
           </p>
           <a href="/about" className="about-btn" onClick={handleKnowMore}>KNOW MORE</a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Press Features Section
+const PressFeaturesSection = () => {
+  return (
+    <section className="press-section">
+      <div className="press-container">
+        <h2 className="press-title">Press Features</h2>
+        <div className="press-grid">
+          {pressFeatures.map((item) => (
+            <div key={item.id} className="press-card">
+              <img src={item.logo} alt={item.alt} className="press-logo" />
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -974,7 +878,7 @@ const Home = () => {
       container.addEventListener("scroll", handleInfiniteScroll);
       container.addEventListener('scroll', checkScrollPosition);
       checkScrollPosition();
-      
+
       return () => {
         clearTimeout(timer);
         container.removeEventListener("scroll", handleInfiniteScroll);
@@ -992,58 +896,58 @@ const Home = () => {
       <section className="combos-section">
         <div className="combos-header">
 
-  {/* TOP ROW: Arrow + Title + Arrow */}
-  <div className="header-top">
-    <button
-      className="nav-arrow"
-      onClick={() => scroll("left")}
-      style={{ visibility: showLeftArrow ? 'visible' : 'hidden' }}
-      aria-label="Scroll left"
-    >
-      <FaChevronLeft />
-    </button>
+          {/* TOP ROW: Arrow + Title + Arrow */}
+          <div className="header-top">
+            <button
+              className="nav-arrow"
+              onClick={() => scroll("left")}
+              style={{ visibility: showLeftArrow ? 'visible' : 'hidden' }}
+              aria-label="Scroll left"
+            >
+              <FaChevronLeft />
+            </button>
 
-    <h2>Anara Products</h2>
+            <h2>Anara Products</h2>
 
-    <button
-      className="nav-arrow"
-      onClick={() => scroll("right")}
-      style={{ visibility: showRightArrow ? 'visible' : 'hidden' }}
-      aria-label="Scroll right"
-    >
-      <FaChevronRight />
-    </button>
-  </div>
+            <button
+              className="nav-arrow"
+              onClick={() => scroll("right")}
+              style={{ visibility: showRightArrow ? 'visible' : 'hidden' }}
+              aria-label="Scroll right"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
 
-  {/* SECOND ROW */}
-  <a href="/product" className="view-all-link">
-    VIEW ALL
-  </a>
+          {/* SECOND ROW */}
+          <a href="/product" className="view-all-link">
+            VIEW ALL
+          </a>
 
-</div>
-
+        </div>
 
         <div className="scroll-container" ref={scrollRef}>
           {extendedCombos.map((item, idx) => (
-            <div 
-              key={`${item.id}-${idx}`} 
+            <div
+              key={`${item.id}-${idx}`}
               className="card"
               onClick={() => handleNavigate(item.id)}
               style={{ cursor: 'pointer' }}
             >
-              <div className="image-wrapper">
-                <ImageGallery
-                  images={item.images}
-                  productName={item.name}
-                  onImageClick={() => handleNavigate(item.id)}
-                />
-              </div>
+             <div className="image-wrapper product-image-wrapper">
+
+  {/* Badge Icon */}
+  <img src={badgeIcon} alt="badge" className="product-badge-icon" />
+
+  <ImageGallery
+    images={item.images}
+    productName={item.name}
+    onImageClick={() => handleNavigate(item.id)}
+  />
+</div>
 
               <div className="card-body">
                 <p className="product-name">{item.name}</p>
-                {/* <p className="reviews">
-                  ⭐⭐⭐⭐⭐ <span>{item.reviews} reviews</span>
-                </p> */}
                 <p className="price">Rs. {item.price}.00</p>
               </div>
 
@@ -1061,61 +965,6 @@ const Home = () => {
         </div>
       </section>
 
-
-{/* four logos */}
-<section className="trust-section">
-  <div className="trust-container">
-
-    {/* Loved by Sri Lanka */}
-    <div className="trust-item">
-      <img
-        src={srilankaIcon}
-        alt="Loved by Sri Lanka"
-        className="trust-icon"
-      />
-      <h4>Loved By Sri Lanka</h4>
-      <p>Loved by 5 lakh+ customers</p>
-    </div>
-
-    {/* Handmade */}
-    <div className="trust-item">
-      <img
-        src={handmadeIcon}
-        alt="Handmade"
-        className="trust-icon"
-      />
-      <h4>Handmade</h4>
-      <p>Every piece is made with love</p>
-    </div>
-
-    {/* Shipping */}
-    <div className="trust-item">
-      <img
-        src={shippingIcon}
-        alt="Shipping"
-        className="trust-icon"
-      />
-      <h4>Ships In 5–7 Days</h4>
-      <p>Write to us to expedite your order</p>
-    </div>
-
-    {/* No Preservatives */}
-    <div className="trust-item">
-      <img
-        src={noPreservativesIcon}
-        alt="No Preservatives"
-        className="trust-icon"
-      />
-      <h4>No Preservatives</h4>
-      <p>Pure taste, naturally fresh</p>
-    </div>
-
-  </div>
-</section>
-
-      {/* Video Reels Section */}
-      {/* <ReelsSection /> */}
-
       {/* Best Sellers Section */}
       <BestSellersSection />
 
@@ -1125,8 +974,40 @@ const Home = () => {
       {/* About Us Section */}
       <AboutUsSection />
 
+      {/* four logos */}
+      <section className="trust-section">
+        <div className="trust-container">
+          <div className="trust-item">
+            <img src={srilankaIcon} alt="Loved by Sri Lanka" className="trust-icon" />
+            <h4>Loved By Sri Lanka</h4>
+            <p>Loved by 5 lakh+ customers</p>
+          </div>
+
+          <div className="trust-item">
+            <img src={handmadeIcon} alt="Handmade" className="trust-icon" />
+            <h4>Handmade</h4>
+            <p>Every piece is made with love</p>
+          </div>
+
+          <div className="trust-item">
+            <img src={shippingIcon} alt="Shipping" className="trust-icon" />
+            <h4>Ships In 5–7 Days</h4>
+            <p>Write to us to expedite your order</p>
+          </div>
+
+          <div className="trust-item">
+            <img src={noPreservativesIcon} alt="No Preservatives" className="trust-icon" />
+            <h4>No Preservatives</h4>
+            <p>Pure taste, naturally fresh</p>
+          </div>
+        </div>
+      </section>
+
       {/* What Makes Anara Special */}
       <SpecialSection />
+
+      {/* Press Features Section - Added after Special Section */}
+      <PressFeaturesSection />
 
       {/* Tasted & Trusted by Millions Section */}
       <TrustedReviewsSection />

@@ -890,3 +890,26 @@ body.dark-mode {
 .light-mode .navbar {
   background-color: #ffffff;
 }
+
+.links-list a,
+.footer-social-icons a,
+.vital-link {
+  -webkit-tap-highlight-color: rgba(151, 94, 225, 0.3);
+}
+
+
+
+.nav-link,
+.search-icon-middle,
+.mobile-menu a,
+.mobile-menu-icon,
+.mobile-menu-close,
+.search-submit-btn,
+.search-close-btn,
+.search-result-item,
+.dropdown-item,
+.social-icon {
+  -webkit-tap-highlight-color: rgba(169, 116, 238, 0.25);
+  outline: none;
+  user-select: none;
+}
