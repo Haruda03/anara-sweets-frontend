@@ -11,12 +11,15 @@ import { products } from "../data/products";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 // Press Features Images
-import behindwoodsLogo from "../assets/images/img1.jpg";
-import vikatanLogo from "../assets/images/img2.jpg";
-import theHinduLogo from "../assets/images/img3.jpg";
+import astaLogo from "../assets/images/asta.png";
+import feastoLogo from "../assets/images/LogoFeasto.png";
+import logos1 from "../assets/images/Logos1.png";
+import logosCloud from "../assets/images/LogosCloud.png";
+import logosVM from "../assets/images/LogosVM.png";
+
 
 // Flavourful Delights Section Images
-import savouriesImg from "../assets/images/img1.jpg";
+import savouriesImg from "../assets/images/FreshOil.png";
 import sweetsImg from "../assets/images/BOONDI LADDU.jpg";
 import podiImg from "../assets/images/EGG FLOUR.jpg";
 import picklesImg from "../assets/images/MIXTURE.jpg";
@@ -24,10 +27,10 @@ import combosImg from "../assets/images/img2.jpg";
 import flavourfulFullWidthImg from "../assets/images/img2.jpg";
 
 // What Makes Anara Special Section Images
-import special25Years from "../assets/images/img1.jpg";
-import specialFlour from "../assets/images/img1.jpg";
-import specialOil from "../assets/images/img1.jpg";
-import specialWomen from "../assets/images/img1.jpg";
+import special25Years from "../assets/images/FreshOil.png";
+import specialFlour from "../assets/images/HandCrafted.png";
+import specialOil from "../assets/images/Homemade.png";
+import specialWomen from "../assets/images/Organic.png";
 
 // About Us Section Images
 import boondiLaddu1 from "../assets/images/BOONDI LADDU.jpg";
@@ -46,21 +49,34 @@ const pressFeatures = [
   {
     id: 1,
     name: "Behindwoods",
-    logo: behindwoodsLogo,
+    logo: astaLogo,
     alt: "Behindwoods",
   },
   {
     id: 2,
     name: "Vikatan",
-    logo: vikatanLogo,
+    logo: feastoLogo,
     alt: "Vikatan",
   },
   {
     id: 3,
     name: "The Hindu",
-    logo: theHinduLogo,
+    logo: logos1,
     alt: "The Hindu",
   },
+   {
+    id: 4,
+    name: "The Hindu",
+    logo: logosCloud,
+    alt: "The Hindu",
+  },
+   {
+    id: 5,
+    name: "The Hindu",
+    logo: logosVM,
+    alt: "The Hindu",
+  },
+
 ];
 
 // Flavourful Delights Data
@@ -447,10 +463,15 @@ const PressFeaturesSection = () => {
     <section className="press-section">
       <div className="press-container">
         <h2 className="press-title">Press Features</h2>
+
         <div className="press-grid">
           {pressFeatures.map((item) => (
             <div key={item.id} className="press-card">
-              <img src={item.logo} alt={item.alt} className="press-logo" />
+              <img
+                src={item.logo}
+                alt={item.alt}
+                className="press-logo"
+              />
             </div>
           ))}
         </div>
@@ -466,7 +487,7 @@ const SpecialSection = () => {
       id: 1,
       image: special25Years,
       title: "40+ Outlets",
-      large: true,
+      // large: true,
       imageTop: false,
     },
     {
