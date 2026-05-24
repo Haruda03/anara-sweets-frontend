@@ -1,34 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ========================= */
+/* BODY (SECONDARY FONT) */
+/* ========================= */
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-family: "Holen Vintage" !important;
   background-color: #fff;
   color: #333;
   line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  overflow-x: hidden;
+/* ========================= */
+/* CUSTOM FONTS */
+/* ========================= */
+
+@font-face {
+  font-family: "Holen Vintage";
+  src: url("../assets/fonts/HolenVintage.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
-  text-decoration: none;
+@font-face {
+  font-family: "NC Geetha";
+  src: url("../assets/fonts/NCGeetha.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-button {
-  cursor: pointer;
+/* ========================= */
+/* FONT UTILITIES */
+/* ========================= */
+
+/* PRIMARY FONT (BRAND / HEADINGS) */
+.primary-font {
+  font-family: "Holen Vintage", serif;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* SECONDARY FONT (DEFAULT BODY TEXT) */
+.secondary-font {
+  font-family: "Outfit", sans-serif;
 }
 
-/* Scrollbar styling */
+/* TAMIL FONT */
+.tamil-font {
+  font-family: "NC Geetha", sans-serif;
+}
+
+/* ========================= */
+/* OPTIONAL GLOBAL USAGE */
+/* ========================= */
+
+/* Headings automatically use primary font */
+h1, h2, h3, h4 {
+  font-family: "Holen Vintage" !important;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -43,5 +89,5 @@ img {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background:#747474;
+  background: #5e5e5e;
 }

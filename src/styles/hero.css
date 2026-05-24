@@ -22,11 +22,9 @@
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.88),
-    rgba(255,255,255,0.45)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.45));
 
   z-index: 1;
 }
@@ -83,7 +81,7 @@
 /* TITLE */
 
 .hero-title {
-  font-family: "Holen Vintage", sans-serif;
+  font-family: "Outfit", sans-serif;
 
   font-size: 4.8rem;
   line-height: 1.1;
@@ -126,14 +124,12 @@
 
   color: white;
 
-  background: linear-gradient(
-    135deg,
-    #b572c6,
-    #8b1185
-  );
+  background: linear-gradient(135deg,
+      #b572c6,
+      #8b1185);
 
   box-shadow:
-    0 12px 28px rgba(139,17,133,0.25);
+    0 12px 28px rgba(139, 17, 133, 0.25);
 
   transition: 0.35s ease;
 }
@@ -141,14 +137,12 @@
 .hero-btn:hover {
   transform: translateY(-3px);
 
-  background: linear-gradient(
-    135deg,
-    #8b1185,
-    #650b61
-  );
+  background: linear-gradient(135deg,
+      #8b1185,
+      #650b61);
 
   box-shadow:
-    0 18px 35px rgba(139,17,133,0.35);
+    0 18px 35px rgba(139, 17, 133, 0.35);
 }
 
 /* ========================= */
@@ -176,12 +170,10 @@
 
   border-radius: 50%;
 
-  background: radial-gradient(
-    circle,
-    rgba(0,0,0,0.35) 0%,
-    rgba(0,0,0,0.12) 45%,
-    rgba(255,255,255,0) 75%
-  );
+  background: radial-gradient(circle,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(255, 255, 255, 0) 75%);
 
   animation: pulse 5s infinite ease-in-out;
 }
@@ -220,7 +212,7 @@
   animation: fadeZoom 1s ease;
 
   filter:
-    drop-shadow(0 25px 40px rgba(0,0,0,0.28));
+    drop-shadow(0 25px 40px rgba(0, 0, 0, 0.28));
 
   transition: 0.4s ease;
 }
