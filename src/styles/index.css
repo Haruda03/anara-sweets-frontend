@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 
 /* ========================= */
 /* RESET */
@@ -31,17 +31,17 @@ body {
 
 @font-face {
   font-family: "Holen Vintage";
-  src: url("../assets/fonts/HolenVintage.ttf") format("truetype");
+  src: url("../assets/fonts/HolenVintage.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "NC Geetha";
   src: url("../assets/fonts/NCGeetha.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 /* ========================= */
 /* FONT UTILITIES */
@@ -67,7 +67,10 @@ body {
 /* ========================= */
 
 /* Headings automatically use primary font */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Holen Vintage" !important;
 }
 

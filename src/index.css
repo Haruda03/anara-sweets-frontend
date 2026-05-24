@@ -1,15 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
-
 /* ========================= */
-/* GLOBAL FONT */
+/* RESET */
 /* ========================= */
 
-body {
+* {
   margin: 0;
-  font-family: "Holen Vintage" !important;
-  font-family: "Outfit", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ========================= */
@@ -18,26 +14,88 @@ body {
 
 @font-face {
   font-family: "Holen Vintage";
-  src: url("./assets/fonts/HolenVintage.ttf") format("truetype");
+  src: url("./assets/fonts/HolenVintage.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "NC Geetha";
-  src: url("./assets/fonts/NCGeetha.ttf") format("truetype");
+  src: url("../assets/fonts/NCGeetha.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+} */
+
+/* ========================= */
+/* BODY (PRIMARY UI FONT) */
+/* ========================= */
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ========================= */
-/* OPTIONAL HELPERS */
+/* FONT UTILITIES */
 /* ========================= */
 
+/* BRAND / HEADINGS */
 .primary-font {
-  font-family: "Holen Vintage", serif;
+  font-family: "Holen Vintage", cursive;
 }
 
+/* DEFAULT TEXT */
+.secondary-font {
+  font-family: "Outfit", sans-serif;
+}
+
+/* TAMIL FONT */
 .tamil-font {
   font-family: "NC Geetha", sans-serif;
+}
+
+/* ========================= */
+/* GLOBAL HEADINGS */
+/* ========================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Holen Vintage", cursive;
+}
+
+/* ========================= */
+/* OPTIONAL GLOBAL BRAND AREAS */
+/* ========================= */
+
+.top-bar-center,
+.menu-brand h2 {
+  font-family: "Holen Vintage", cursive;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #747474;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5e5e5e;
 }
