@@ -277,80 +277,100 @@ const ImageGallery = ({ images, productName, onImageClick }) => {
 
 // Best Sellers section component - Make entire card clickable - CORRECTED
 const BestSellersSection = () => {
-  const navigate = useNavigate(); // Added useNavigate hook
+  const navigate = useNavigate();
   const bestSellersScrollRef = useRef(null);
+
   const bestSellers = bestSellerIds
     .map((id) => products.find((item) => item.id === id))
     .filter(Boolean);
+
   const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
 
   const handleNavigate = (id) => {
-    navigate(`/product/${id}`); // Changed to use navigate
+    navigate(`/product/${id}`);
   };
 
   const checkScrollPosition = () => {
-    if (bestSellersScrollRef.current) {
-      const { scrollLeft } = bestSellersScrollRef.current;
-      setShowLeftArrow(scrollLeft > 10);
-    }
+    const el = bestSellersScrollRef.current;
+    if (!el) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+
+    setShowLeftArrow(scrollLeft > 10);
+    setShowRightArrow(scrollLeft + clientWidth < scrollWidth - 10);
   };
 
   const scrollBestSellers = (dir) => {
-    if (!bestSellersScrollRef.current) return;
-    const amount = 340;
-    bestSellersScrollRef.current.scrollBy({
+    const el = bestSellersScrollRef.current;
+    if (!el) return;
+
+    const amount = 320;
+
+    el.scrollBy({
       left: dir === "left" ? -amount : amount,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-    setTimeout(checkScrollPosition, 300);
   };
 
   useEffect(() => {
-    const container = bestSellersScrollRef.current;
-    if (container) {
-      container.addEventListener('scroll', checkScrollPosition);
-      checkScrollPosition();
-      return () => container.removeEventListener('scroll', checkScrollPosition);
-    }
+    const el = bestSellersScrollRef.current;
+    if (!el) return;
+
+    el.addEventListener("scroll", checkScrollPosition);
+    checkScrollPosition();
+
+    return () => el.removeEventListener("scroll", checkScrollPosition);
   }, []);
 
   return (
     <section className="bestsellers-section">
+
+      {/* HEADER */}
       <div className="bestsellers-header">
+
         <button
-          className="nav-arrow bestsellers-nav-arrow"
+          className="bestsellers-nav-arrow left"
           onClick={() => scrollBestSellers("left")}
-          style={{ visibility: showLeftArrow ? 'visible' : 'hidden' }}
+          style={{ visibility: showLeftArrow ? "visible" : "hidden" }}
         >
           &#8249;
         </button>
 
         <div className="title-box">
           <h2>Best Sellers</h2>
-          <a 
-            href="/product" 
+          <a
+            href="/product"
             className="view-all-link"
             onClick={(e) => {
               e.preventDefault();
-              navigate('/product');
-              setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+              navigate("/product");
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
             VIEW ALL
           </a>
         </div>
+
+        <button
+          className="bestsellers-nav-arrow right"
+          onClick={() => scrollBestSellers("right")}
+          style={{ visibility: showRightArrow ? "visible" : "hidden" }}
+        >
+          &#8250;
+        </button>
+
       </div>
 
+      {/* SCROLL AREA */}
       <div className="bestsellers-scroll-container" ref={bestSellersScrollRef}>
         {bestSellers.map((item) => (
           <div
             key={item.id}
             className="bestseller-card"
             onClick={() => handleNavigate(item.id)}
-            style={{ cursor: 'pointer' }}
           >
             <div className="image-wrapper product-image-wrapper">
-              {/* Badge Icon */}
               <img src={badgeIcon} alt="badge" className="product-badge-icon" />
               <ImageGallery
                 images={item.images}
@@ -358,10 +378,12 @@ const BestSellersSection = () => {
                 onImageClick={() => handleNavigate(item.id)}
               />
             </div>
+
             <div className="bestseller-card-body">
               <p className="bestseller-product-name">{item.name}</p>
               <p className="bestseller-price">Rs. {item.price.toFixed(2)}</p>
             </div>
+
             <button
               className="bestseller-add-btn"
               onClick={(e) => {
@@ -374,10 +396,10 @@ const BestSellersSection = () => {
           </div>
         ))}
       </div>
+
     </section>
   );
 };
-
 // Flavourful Delights Section
 const FlavourfulDelightsSection = () => {
   const navigate = useNavigate();
