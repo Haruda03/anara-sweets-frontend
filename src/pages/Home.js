@@ -7,7 +7,7 @@ import "../styles/home.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import badgeIcon from "../assets/images/icon.png";
-import { products } from "../data/products";
+import { products } from "../data/Products";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 // Press Features Images

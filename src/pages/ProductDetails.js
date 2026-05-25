@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import '../styles/productDetails.css';
-import { products } from "../data/products";
+import { products } from "../data/Products";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import badgeIcon from "../assets/images/icon.png";
