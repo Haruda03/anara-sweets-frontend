@@ -19,11 +19,11 @@ import logosVM from "../assets/images/LogosVM.png";
 
 
 // Flavourful Delights Section Images
-import savouriesImg from "../assets/images/FreshOil.png";
-import sweetsImg from "../assets/images/BOONDI LADDU.jpg";
-import podiImg from "../assets/images/EGG FLOUR.jpg";
-import picklesImg from "../assets/images/MIXTURE.jpg";
-import combosImg from "../assets/images/img2.jpg";
+import savouriesImg from "../assets/images/Combos.png";
+import sweetsImg from "../assets/images/Sweet.png";
+import podiImg from "../assets/images/Kids.png";
+import picklesImg from "../assets/images/Spicy.png";
+import combosImg from "../assets/images/Adults.png";
 import flavourfulFullWidthImg from "../assets/images/img2.jpg";
 
 // What Makes Anara Special Section Images
@@ -83,7 +83,7 @@ const pressFeatures = [
 const flavourfulDelights = [
   {
     id: 1,
-    name: "Savouries",
+    name: "Combos",
     image: savouriesImg,
   },
   {
@@ -93,17 +93,17 @@ const flavourfulDelights = [
   },
   {
     id: 3,
-    name: "Podi",
+    name: "kids' snacks",
     image: podiImg,
   },
   {
     id: 4,
-    name: "Pickles",
+    name: "Spicy Pickles",
     image: picklesImg,
   },
   {
     id: 5,
-    name: "Combos",
+    name: "Adults' Snacks",
     image: combosImg,
   },
 ];
