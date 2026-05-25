@@ -120,11 +120,12 @@
   transform: scale(1.05);
 }
 
+/* CENTER LOGO */
 .logo-wrapper {
-  flex: 1;
   display: flex;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
+  transform: translateX(40px); 
 }
 
 .middle-logo {
@@ -288,7 +289,7 @@
   z-index: 10000;
   padding:   2.5rem 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: slideDown 0.3s ease;
+  
 }
 
 @keyframes slideDown {
