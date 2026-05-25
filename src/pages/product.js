@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from "../components/WhatsAppButton";
 import '../styles/product.css';
-import { products } from "../data/products";
+import { products } from "../data/Products";
 import { filterProductsBySearch } from "../utils/searchProducts";
 
 const SORT_OPTIONS = [

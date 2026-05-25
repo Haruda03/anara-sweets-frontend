@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import '../styles/navbar.css';
 import logo from '../assets/images/logo.png';
 import { Link, useNavigate } from "react-router-dom";
-import { products } from '../data/products';
+import { products } from '../data/Products';
 import { filterProductsBySearch } from '../utils/searchProducts';
 
 const SEARCH_PREVIEW_LIMIT = 6;
