@@ -1,152 +1,253 @@
-/* About page styles */
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-hero,
+.about-content-section {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ================= FONTS ================= */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "HolenVintage", sans-serif;
+}
+
+p,
+li {
+  font-family: "Outfit", sans-serif;
+}
+
+/* ================= CONTENT SECTION ================= */
+
+.about-content-section {
+  padding: 80px 20px 50px;
+  background: #ffffff;
+}
+
+.about-content-section .container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-content-section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #111;
+}
+
+.about-content-section h3 {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-content-section p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-content-section ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.about-content-section li {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ================= HERO SECTION ================= */
+
 .about-hero {
-  background: #efe7e1;
-  padding: 60px 0;
+  padding: 40px 0 80px;
 }
 
 .about-hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: center;
+  gap: 50px;
+
+  padding: 0 60px;
+}
+
+.about-hero-image {
+  flex: 1;
 }
 
 .about-hero-image img {
   width: 100%;
-  height: 560px;
+  height: 550px;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  display: block;
 }
 
 .about-hero-content {
-  background: #fffdf9;
-  padding: 60px 40px;
-  border-radius: 6px;
+  flex: 1;
 }
 
 .about-title {
-  font-size: 38px;
-  line-height: 1.05;
-  margin: 0 0 18px;
-  color: #1b1b1b;
-  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 20px;
 }
 
 .about-subtitle {
-  color: #6c6c6c;
-  margin-bottom: 28px;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #666;
 }
 
-.about-shop-btn {
-  display: inline-block;
-  background: #caa83f;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-}
+/* ================= TABLET RESPONSIVE ================= */
 
-.about-details {
-  padding: 60px 0 100px;
-  background: white;
-}
-
-.about-details-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.about-details h2 {
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-.about-details p {
-  color: #444;
-  line-height: 1.8;
-}
-
-.about-details ul {
-  margin-top: 12px;
-  list-style: disc inside;
-}
-
-@media (max-width: 980px) {
+@media (max-width: 992px) {
   .about-hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero-image img {
-    height: 360px;
-  }
-
-  .about-hero-content {
-    padding: 28px 20px;
+    gap: 40px;
+    padding: 0 40px;
   }
 
   .about-title {
-    font-size: 26px;
+    font-size: 38px;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+  }
+
+  .about-hero-image img {
+    height: 450px;
+  }
+
+  .about-content-section h2 {
+    font-size: 36px;
+  }
+
+  .about-content-section h3 {
+    font-size: 24px;
   }
 }
 
-/* New sections styles */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .about-content-section {
+    padding: 50px 20px 30px;
+  }
+
+  .about-content-section h2 {
+    font-size: 32px;
+  }
+
+  .about-content-section h3 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .about-content-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .about-content-section li {
+    font-size: 15px;
+  }
+
+  .about-hero {
+    padding: 30px 0 50px;
+  }
+
+  .about-hero-inner {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .about-hero-image {
+    width: 100%;
+  }
+
+  .about-hero-image img {
+    width: 100%;
+    height: 320px;
+    border-radius: 15px;
+  }
+
+  .about-hero-content {
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+  }
 }
 
-.center { text-align: center; }
-.muted { color: #6b6b6b; max-width: 850px; margin: 0 auto; }
+/* ================= SMALL MOBILE ================= */
 
-.excellence-section .banner-image img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  margin-top: 30px;
+@media (max-width: 480px) {
+  .about-content-section {
+    padding: 40px 15px 20px;
+  }
+
+  .about-content-section h2 {
+    font-size: 28px;
+  }
+
+  .about-content-section h3 {
+    font-size: 20px;
+  }
+
+  .about-content-section p {
+    font-size: 14px;
+  }
+
+  .about-content-section li {
+    font-size: 14px;
+  }
+
+  .about-hero-inner {
+    padding: 0 15px;
+  }
+
+  .about-hero-image img {
+    height: 250px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-subtitle {
+    font-size: 14px;
+  }
 }
-
-.excellence-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #173049;
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-  padding: 40px 0;
-}
-
-.two-col .image img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; }
-
-.two-col .text h3 { font-size: 22px; margin-bottom: 12px; color: #173049; }
-.two-col .text p { color: #444; line-height: 1.8; }
-
-.about-grid .text h3 { font-size: 28px; margin-top: 0; }
-
-.reverse-on-mobile { grid-auto-flow: dense; }
-
-.philosophy-section .alt { padding-top: 10px; }
-
-.certifications-section { padding: 40px 0 100px; }
-.cert-icons { display: flex; gap: 40px; justify-content: center; align-items: center; margin-top: 30px; }
-.cert-icons img { width: 80px; height: 80px; object-fit: contain; opacity: 0.9; }
-
-@media (max-width: 880px) {
-  .two-col { grid-template-columns: 1fr; }
-  .two-col .image img { height: 240px; }
-  .about-hero-image img { height: 320px; }
-  .cert-icons { gap: 20px; }
-}
-

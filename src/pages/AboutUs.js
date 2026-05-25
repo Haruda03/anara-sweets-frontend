@@ -1,127 +1,130 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import '../styles/aboutus.css';
+import React from "react";
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
+import "../styles/aboutus.css";
 
-import heroImg from '../assets/images/img2.jpg';
-import bannerImg from '../assets/images/sweets-banner.jpg';
-import qualityImg from '../assets/images/img3.jpg';
-import gridImg from '../assets/images/img4.jpg';
-import smallOne from '../assets/images/img1.jpg';
-import smallTwo from '../assets/images/img4.jpeg';
-import logo from '../assets/images/logo.png';
+import heroImg from "../assets/images/img2.jpg";
 
 const AboutUs = () => {
-	return (
-		<>
-			<Navbar />
+  const scrollRevealVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
-			<main className="about-hero">
-				<div className="about-hero-inner">
-					<div className="about-hero-image">
-						<img src={heroImg} alt="Anara sweets hero section" />
-					</div>
+  return (
+    <>
+      <Navbar />
 
-					<div className="about-hero-content">
-						<h1 className="about-title">
-							The Taste Of Royal India, Perfected Over Generations.
-						</h1>
-						<p className="about-subtitle">
-							Anand sweets, sweetening celebrations since 1988
-						</p>
-						<a href="/" className="about-shop-btn">SHOP NOW</a>
-					</div>
-				</div>
-			</main>
+      {/* ================= ABOUT CONTENT ================= */}
+      <motion.section
+        className="about-content-section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={scrollRevealVariants}
+      >
+        <div className="container">
+          <h2>About Us</h2>
 
-			<section className="excellence-section">
-				<div className="container center">
-					<h2>Excellence In Every Morsel</h2>
-					<p className="muted">
-						For over 3 decades, Anand has grown to be synonymous with premium quality Indian Sweets.
-					</p>
-				</div>
+          <p>
+            Every bite is a celebration of our ethnic Indian flavours and rich
+            heritage at Aswins Sweets. Made with traditionally followed and
+            loved recipes that recite the epic stories of Indian flavours, at
+            Aswins Sweets, we make our delicious delights with love.
+          </p>
 
-				<div className="banner-image">
-					<img src={bannerImg} alt="assorted Indian sweets banner" />
-				</div>
-			</section>
+          <p>We bring home a reason to celebrate!</p>
 
-			<section className="quality-section">
-				<div className="container two-col">
-					<div className="col text">
-						<h3>Quality That Delights, In Every Bite.</h3>
-						<p>
-							Over decades, Anand has grown to be synonymous with premium quality Indian sweets.
-						</p>
-					</div>
-					<div className="col image">
-						<img src={qualityImg} alt="premium sweets quality display" />
-					</div>
-				</div>
-			</section>
+          <p>
+            A story that began in 2004 is now a beloved and trusted name in
+            homes across Tamil Nadu, with 25 outlets and counting.
+          </p>
 
-			<section className="about-grid">
-				<div className="container two-col reverse-on-mobile">
-					<div className="col image">
-						<img src={gridImg} alt="assorted sweets arrangement" />
-					</div>
-					<div className="col text">
-						<h4>About Us</h4>
-						<h3>Taste Of Royal India</h3>
-						<p>
-							Anand owes its success to tradition, innovation and uncompromising quality.
-						</p>
-					</div>
-				</div>
-			</section>
+          <p>
+            We’ve proven ourselves to be a harbinger of pride and have
+            withstood the test of time amidst the other brands, and we've
+            secured a sweet spot in people's hearts with our Indian snacks and
+            savouries.
+          </p>
 
-			<section className="philosophy-section">
-				<div className="container two-col">
-					<div className="col image">
-						<img src={smallOne} alt="sweets preparation" />
-					</div>
-					<div className="col text">
-						<h5>Our Philosophy</h5>
-						<h3>Luxurious Mithais, Accessible To Everyone</h3>
-						<p>
-							We are obsessed with authenticity and curate flavours for every celebration.
-						</p>
-					</div>
-				</div>
+          <h3>Why Choose Us?</h3>
 
-				<div className="container two-col alt">
-					<div className="col text">
-						<h5>Our Craft</h5>
-						<p>
-							Our artisans follow traditional techniques with modern quality standards.
-						</p>
-					</div>
-					<div className="col image">
-						<img src={smallTwo} alt="artisan sweet crafting process" />
-					</div>
-				</div>
-			</section>
+          <p>
+            As a testament to our rich and varied culinary heritage, we at
+            Aswins Sweets are committed to crafting the finest and most
+            treasured healthy Indian snacks.
+          </p>
 
-			<section className="certifications-section">
-				<div className="container center">
-					<h3>Awards And Accreditations</h3>
-					<p className="muted">
-						Anand has won numerous food safety and quality certifications.
-					</p>
+          <h3>What makes us special?</h3>
 
-					<div className="cert-icons">
-						<img src={logo} alt="company logo" />
-						<img src={logo} alt="ISO certification icon" />
-						<img src={logo} alt="FDA certification icon" />
-						<img src={logo} alt="FSSAI certification icon" />
-					</div>
-				</div>
-			</section>
+          <p>
+            We use only organic, refined groundnut oil, and our oil is never
+            reused.
+          </p>
 
-			<Footer />
-		</>
-	);
+          <ul>
+            <li>
+              We use only organic, refined groundnut oil; oil is never reused.
+            </li>
+            <li>
+              All sweets are produced in our own factory under strict hygiene.
+            </li>
+            <li>
+              We source locally and use age-old, authentic recipes.
+            </li>
+            <li>
+              Our team includes skilled artisans and 1500+ staff, mostly women.
+            </li>
+          </ul>
+
+          <p>
+            Every sweet you enjoy is made with love and meant to reach your
+            heart.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* ================= IMAGE CONTAINER ================= */}
+      <main className="about-hero">
+        <div className="about-hero-inner">
+          <motion.div
+            className="about-hero-image"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img src={heroImg} alt="About Hero" />
+          </motion.div>
+
+          <motion.div
+            className="about-hero-content"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="about-title">
+              The Taste Of Royal India, Perfected Over Generations.
+            </h1>
+
+            <p className="about-subtitle">
+              Anand sweets, sweetening celebrations since 1988
+            </p>
+          </motion.div>
+        </div>
+      </main>
+
+      <Footer />
+      <WhatsAppButton />
+    </>
+  );
 };
 
 export default AboutUs;
