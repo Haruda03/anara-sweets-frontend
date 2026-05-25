@@ -159,10 +159,11 @@
 /* ========================= */
 
 .support-contact-row {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .phone-numbers {
